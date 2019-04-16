@@ -1,0 +1,54 @@
+Git ist eine freie Software zur verteilten Versionsverwaltung von Dateien
+Erstellt von Linus Torvalds
+
+
+
+Wozu Git?
+  -> Erleichtert die Zusammenarbeit im Team
+  -> Kopie vom Projekt wird gezogen
+  -> Programmierer arbeiten an der Kopie
+  -> Änderungen am Code werden ohne Konflikte zurück in die Basis übertragen werden
+
+
+Vertteilte Versionsverwaltung:
+
+  - Erfasst Änderungen an Dokumenten oder Dateien. Archiv besteht aus Zeitstempel und Benutzerkennung gesichert und können wiederhergestellt werden
+  - Verwendet kein zentrales Repository mehr
+  - Jeder hat sein eigenes Repository
+  - Änderungen können lokal verfolgt werden, ohne eine Verbindung zu einem Server aufbauen zu müssen
+
+Datentransfer zwischen Repositorien:
+  TCP-Port 9418 (git://) -> Lesen eines Repositorys
+  SSH (ssh://) -> Für's Schreiben - für HTTP, HTTPS, FTP ebenso
+
+
+
+Was heißt Repository?
+  -> engl. für Lager oder Quelle
+  -> Verzeichnis zur Speicherung und Beschreibung von Dateien für ein Archiv
+
+
+  Konsolenbefehle:  {<-->
+
+    git init:
+      -> Aus einem vorhandenden Verzeichnis mit QUELLCODE kann ein Git-Repository genieriert werden
+
+    git remode add <server-name> <link> (https://github.com/<username>/<datei>.git):
+      -> Server zum Repositorien wird initialisiert
+      ACHTUNG:
+        Sollte es Dateien geben, die nur lokal existieren und NIEMALS auf GitHub hochgeladen werden sollen,
+        kann man diese Dateien zu einer Ausnahme-Datei .gitignore hinzufügen
+
+    Übertragung zu GitHub:
+      git add . oder Dateiname         -->  {1}
+      git commit -m "Initial commit"   -->  {2}
+      git push -u origin master        -->  {3}
+
+       {1} -- add = Dateien werden zur Staging-Area hinzugefügt
+       {2} -- commit =
+       {3} --
+
+
+
+
+  </-->}
